@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+
+		<script
+  			src="http://code.jquery.com/jquery-3.3.1.min.js"
+  			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  			crossorigin="anonymous">
+  		</script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  		<script src="{% static 'js/stocks.js' %}"></script>
+
+		<title>The Motley Fool</title>
+	</head>
+	<body>
+		<div class="header">
+			<a href="{%url 'homepage' %}"><img class="logo-sized" src="{% static 'img/logo.png' %}" /></a>
+		</div>
+		{% block content %}
+		{% endblock %}
+		<div class="footer">
+			© 2018 The Motley Fool, LLC
+		</div>
+	</body>
+	{% block js %}
+	{% endblock %}
+</html>

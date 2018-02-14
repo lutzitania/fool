@@ -1,0 +1,81 @@
+{% extends 'articles/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div class="article-body-container inline-block-valigned shadow">
+		<div class="article article-headline">
+			{{ article.headline }}
+		</div>
+		<div class="article article-byline">
+			Written By {{ article.authors.0.first_name }} {{ article.authors.0.last_name }} | {{ publish_at }}
+		</div>
+		<div class="article">
+			{% autoescape off %}{{ articlebody }}{% endautoescape %}
+		</div>
+	</div>
+	<div class="inline-block-topaligned sidebar-container shadow">
+		<div class="stock-container">
+			<h2>Stocks</h2>
+			<div class="stock-single-container">
+				<div class="stock-image-container inline-block-valigned">
+					<div id="stock-image-0" class="stock-image"></div>					
+				</div>
+				<div class="inline-block-topaligned">
+					<div id="stock-headline-0" class="stock-headline">Stock Headline</div>
+					<div id="stock-ticker-0" class="stock-ticker">Stock Ticker</div>
+					<div id="stock-price-0" class="stock-price">Stock Price</div>
+				</div>
+			</div>
+			<div class="stock-single-container">
+				<div class="stock-image-container inline-block-valigned">
+					<div id="stock-image-1" class="stock-image"></div>
+				</div>
+				<div class="inline-block-topaligned">
+					<div id="stock-headline-1" class="stock-headline">Stock Headline</div>
+					<div id="stock-ticker-1" class="stock-ticker">Stock Ticker</div>
+					<div id="stock-price-1" class="stock-price">Stock Price</div>
+				</div>
+			</div>
+			<div class="stock-single-container">
+				<div class="stock-image-container inline-block-valigned">
+					<div id="stock-image-2" class="stock-image"></div>
+				</div>
+				<div class="inline-block-topaligned">
+					<div id="stock-headline-2" class="stock-headline">Stock Headline</div>
+					<div id="stock-ticker-2" class="stock-ticker">Stock Ticker</div>
+					<div id="stock-price-2" class="stock-price">Stock Price</div>
+				</div>
+			</div>
+			<button id="btn-refresh" type="button" class="btn btn-default btn-sm">Refresh</button>
+		</div>
+		<div class="latest-headlines">
+			<h2>Latest Headlines</h2>
+			<ul>
+				<li><a href="{% url 'detail' uuid=hl1.uuid %}">{{ hl1.headline }}</li></a>
+				<li><a href="{% url 'detail' uuid=hl2.uuid %}">{{ hl2.headline }}</li></a>
+				<li><a href="{% url 'detail' uuid=hl3.uuid %}">{{ hl3.headline }}</li></a>
+				<li><a href="{% url 'detail' uuid=hl4.uuid %}">{{ hl4.headline }}</li></a>
+				<li><a href="{% url 'detail' uuid=hl5.uuid %}">{{ hl5.headline }}</li></a>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block js %}
+<script>
+	$(document).ready(function(){
+		$.getJSON("{% static 'js/quotes_api.json' %}", function(data) {
+			for(var i=0; i<data.length; i++){
+				console.log(data[i].CompanyName);
+			}
+			redrawStocks(data);
+		})
+	});
+	$('#btn-refresh').click(function(){
+		$.getJSON("{% static 'js/quotes_api.json' %}", function(data) {
+			redrawStocks(data);
+		})
+	});
+</script>
+{% endblock %}

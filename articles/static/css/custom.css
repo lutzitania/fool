@@ -1,0 +1,270 @@
+/*
+ * But is i
+ * t respon
+ * sive des
+ * ign?
+*/
+
+body{
+	background-color: #f2F2F2;
+}
+
+a{
+	color: black;
+}
+
+li{
+	margin-bottom: 5px;
+}
+
+/* Reusable Classes */
+.inline-block-valigned{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.inline-block-topaligned{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Base Template Classes */
+.header{
+	height: 50px;
+	background-color: #cccccc;
+}
+
+.footer{
+	position: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	font-size: 10px;
+}
+
+/* Homepage Classes */
+.toparticle-block{
+	height: 220px;
+	width: 90%;
+	min-width: 400px;
+	background-color: white;
+	display: block;
+	margin: 20px auto 20px auto;
+	max-width: 1100px;
+}
+
+.toparticle-text-container{
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 67%;
+	height: 90%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.toparticle-img-container{
+	margin-top: 10px;
+	margin-left: 2%;
+	width: 25%;
+	height: 90%;
+	border-radius: 5px;
+}
+
+.toparticle-img{
+	width: 100%;
+	border-radius: 5px;
+}
+
+.toparticle-headline{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	width: 97%;
+}
+
+.promo{
+	font-style: italic;
+	width: 95%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.secondaryimage{
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	display: block;
+}
+
+.secondary-articles-block{
+	height: 375px;
+	width: 90%;
+	min-width: 400px;
+	background-color: white;
+	display: block;
+	margin: 20px auto 20px auto;
+	border-radius: 5px;
+	max-width: 1100px;
+}
+
+.secondary-article-container{
+	width: 30%;
+	height: 325px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 2% 5px 5px 18px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.secondary-headline{
+	font-weight: 700;
+	margin-left: 8px;
+}
+
+.logo-sized{
+	margin-left: 2px;
+	margin-top: 2px;
+	height: 45px;
+	width: 290px;
+}
+
+.shadow{
+	/* Shadows */
+	border-radius: 2px;
+	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  	-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Article Detail Page */
+.article-body-container{
+	width: 70%;
+	margin-left: 15px;
+	margin-top: 15px;
+	background-color: white;
+}
+
+.article-headline{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+}
+
+.article-byline{
+	font-style: italic;
+}
+
+.article{
+	width: 95%;
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.article h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+.article a{
+	text-decoration: underline;
+}
+
+.article img{
+	margin-left: 20px;
+}
+
+.article table{
+	border: 1px solid black;
+	border-radius: 20px;
+	margin-left: 20px;
+}
+
+.article table tr:first-child{
+	background-color: #4c4c4c;
+	color: white;
+}
+
+.article table td{
+	border: 1px solid black;
+}
+
+.caption{
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+/* Sidebar Container */
+
+.sidebar-container{
+	margin-left: 1%;
+	margin-top: 15px;
+	height: 850px;
+	width: 27%;
+	min-width: 300px;
+	background-color: white;
+}
+
+/* Headline Container*/
+
+.latest-headlines h2{
+	margin-left: 15px;
+}
+
+.latest-headlines{
+	display: block;
+	width: 98%;
+	height: 38%;
+	margin-top: 55px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Stock Panel*/
+
+.stock-container{
+	display: block;
+	width: 98%;
+	height: 58%;
+	margin-left: 12px;
+	margin-top: 5px;
+}
+
+.stock-image-container{
+	width: 38%;
+	height: 98%;
+}
+
+.stock-image{
+	width: 100px;
+	height: 100px;
+}
+
+.stock-single-container{
+	height: 28%;
+}
+
+.stock-headline{
+	font-weight: 700;
+}
+
+.stock-price{
+	font-weight: 600;
+}
+
+.stock-gain{
+	color: green;
+}
+
+.stock-loss{
+	color: red;
+}

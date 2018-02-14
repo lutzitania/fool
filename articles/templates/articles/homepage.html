@@ -1,0 +1,50 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+	
+	<div class="toparticle-block shadow">
+		<div class="toparticle-img-container inline-block-valigned">
+			<img class="toparticle-img" src="{{ toparticle.images.0.url }}" />
+		</div>
+		<div class="toparticle-text-container inline-block-valigned">
+			<div class="toparticle-headline center">
+				<div class="headline top-headline">
+					<a href="{% url 'detail' uuid=toparticle.uuid %}">{{ toparticle.headline }}</a>
+				</div>
+			</div>
+			<div class="promo">
+				{{ toparticle.promo }}
+			</div>
+		</div>
+	</div>
+
+	<div class="secondary-articles-block shadow">
+		<div class="secondary-article-container">
+			<img class="secondaryimage" src="{{ article1.images.0.url }}" />
+			<div class="headline secondary-headline">
+				<a href="{% url 'detail' uuid=article1.uuid %}">{{ article1.headline }}</a>
+			</div>
+			<div class="promo secondary-promo">
+				{{ article1.promo }}
+			</div>
+		</div>
+		<div class="secondary-article-container">
+			<img class="secondaryimage" src="{{ article2.images.0.url }}" />
+			<div class="headline secondary-headline">
+				<a href="{% url 'detail' uuid=article2.uuid %}">{{ article2.headline }}</a>
+			</div>
+			<div class="promo secondary-promo">
+				{{ article2.promo }}
+			</div>
+		</div>
+		<div class="secondary-article-container">
+			<img class="secondaryimage" src="{{ article3.images.0.url }}" />
+			<div class="headline secondary-headline">
+				<a href="{% url 'detail' uuid=article3.uuid %}">{{ article3.headline }}</a>
+			</div>
+			<div class="promo">
+				{{ article3.promo }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
